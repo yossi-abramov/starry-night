@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.star {
+  --twinkle-duration: "";
+  --twinkle-delay: "";
+  --star-size: "";
+  position: absolute;
+  width: var(--star-size);
+  height: var(--star-size);
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle infinite alternate;
+  animation-duration: var(--twinkle-duration);
+  animation-delay: var(--twinkle-delay);
+}
+  
+@keyframes twinkle {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.5);
+        box-shadow: 0 0 5px 0.5px rgba(150, 150, 150, 0.6);
+    }
+}
